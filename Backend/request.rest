@@ -1,0 +1,53 @@
+
+#Segmen User
+POST http://localhost:3006/v1/api/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ5b3ZpdGExN0BnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTY4MzM4NjA5OH0.sKe0lDaOmNWeaRG0Qx68p_mMOnM9XGLLp4IpFOUbNP0
+
+{
+    "name" : "Yovita Z",
+    "email" : "yovita2001@gmail.com",
+    "password" : "yovita1701",
+    "role" : "admin"
+}
+
+###
+POST http://localhost:3006/v1/api/login
+Content-Type: application/json
+
+{
+    "email" : "yovita2001@gmail.com",
+    "password" : "yovita1701"
+}
+
+#Segmen Car
+###
+POST http://localhost:3006/v1/api/car/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ5b3ZpdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjgzMzY4NjkxfQ.Apm-u_EGKnNcih55oAs0p3YPw4j0DP4-absatNL9klg
+Content-Type: application/json
+
+{
+    "car_name": "Brio",
+    "price": "100000000",
+    "size":"Small"
+}
+
+###
+DELETE http://localhost:3006/v1/api/car/delete/Lamborghini
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ5b3ZpdGExN0BnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTY4MzM4NjIxNX0.QLzLFW2fTjyns_XTu12IXdRjKNHNAeIgP-goJCW9DOw
+
+###
+GET http://localhost:3006/v1/api/car/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ5b3ZpdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjgzMzY4NjkxfQ.Apm-u_EGKnNcih55oAs0p3YPw4j0DP4-absatNL9klg
+
+###
+PATCH  http://localhost:3006/v1/api/car/update/Avanza
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ5b3ZpdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjgzMzY4NjkxfQ.Apm-u_EGKnNcih55oAs0p3YPw4j0DP4-absatNL9klg
+Content-Type: application/json
+
+{
+
+    "car_name": "Lamborghini",
+    "price": "100000000",
+    "size":"Super Big"
+}
